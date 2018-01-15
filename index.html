@@ -12,41 +12,25 @@
 </head>
 
 <body>
-    <div class="container">
-        <div style="margin: 20px">
-            <input id="example-major-anatomy" />            
-        </div>
-        <div style="margin: 20px">
-            <input id="example-subanatomy" />
-        </div>
-        <div style="margin: 20px">
-            <input id="example-findings" />          
-        </div>
+    <div class="container" style="margin: 50px auto; width: 500px; background-color:cadetblue;">
+        <h2 style="text-align: center">Sample Annotation Autofill</h2>
+        <form style="padding: 20px;">
+            <div class="form-group">
+                <label for="example-major-anatomy">Major Anatomy</label>
+                <input class="form-control" placeholder="Type a major anatomy. Eg: Bones, Lungs" id="example-major-anatomy" />
+            </div>
+            <div class="form-group">
+                <label for="example-subanatomy">Subanatomy</label>
+                <input class="form-control" placeholder="Type a subanatomy. Eg: Ribs, Upper Lung Zone" id="example-subanatomy" />
+            </div>
+            <div class="form-group">
+                <label for="example-findings">Findings</label>
+                <input class="form-control" placeholder="Type a finding. Eg: Fracture, Alveolar Opacity" id="example-findings" />
+            </div>
+        </form>
+
     </div>
-    <script src="index.js">
-        // var options = {
-        //     url: "resources/people.json",
-
-        //     getValue: "name",
-
-        //     template: {
-        //         type: "description",
-        //         fields: {
-        //             description: "email"
-        //         }
-        //     },
-
-        //     list: {
-        //         match: {
-        //             enabled: true
-        //         }
-        //     },
-
-        //     theme: "plate-dark"
-        // };
-
-        // $("#example-mail").easyAutocomplete(options);
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

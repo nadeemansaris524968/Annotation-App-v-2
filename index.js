@@ -68,7 +68,7 @@ var SearchCtrl = (function () {
                     {
                         "name": "Cervical Spine",
                         "Findings": [
-                            { 
+                            {
                                 "name": "Fracture",
                                 "Laterality Modifier": [
                                     { "name": "NA" }
@@ -88,7 +88,7 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ]
                             },
-                            { 
+                            {
                                 "name": "Bone Lesion",
                                 "Laterality Modifier": [
                                     { "name": "NA" }
@@ -102,13 +102,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Size Modifiers": [
-                                    { "name": "Small" }, 
+                                    { "name": "Small" },
                                     { "name": "Moderate" },
                                     { "name": "Large" },
                                     { "name": "Measures:" }
                                 ]
                             },
-                            { 
+                            {
                                 "name": "Metal bone implant or fixation hardware",
                                 "Laterality Modifier": [
                                     { "name": "NA" }
@@ -125,7 +125,7 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ]
                             },
-                            { 
+                            {
                                 "name": "Scoliosis",
                                 "Laterality Modifier": [
                                     { "name": "NA" }
@@ -144,7 +144,7 @@ var SearchCtrl = (function () {
                                     { "name": "Cobb angle measures:" }
                                 ]
                             },
-                            { 
+                            {
                                 "name": "Spinal degenerative changes",
                                 "Laterality Modifier": [
                                     { "name": "NA" }
@@ -219,7 +219,16 @@ var UICtrl = (function () {
         findingsInput: '#findings',
         subanatomyInput: '#subanatomy',
         majorAnatomyInput: '#major-anatomry'
-    }
+    };
+
+    // Trigger focus event on input field to show list of available options
+    var triggerFocus = function (inputDOMString) {
+        var e = jQuery.Event("keyup", { keyCode: 65, which: 65 });
+        // $(inputDOMString).focus();
+        $(inputDOMString).attr('value', '');
+        $(inputDOMString).triggerHandler(e);
+        $(inputDOMString).trigger('change');
+    };
 
     return {
         setupNumberModifiers: function (searchData) {
@@ -233,7 +242,9 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.numberModifierInput).easyAutocomplete(options);
+            $(DOMStrings.numberModifierInput).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.numberModifierInput);
+            });
         },
         setupCharacter: function (searchData) {
             var options = {
@@ -246,7 +257,9 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.characterInput).easyAutocomplete(options);
+            $(DOMStrings.characterInput).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.characterInput);
+            });
         },
         setupLaterality: function (searchData) {
             var options = {
@@ -259,7 +272,9 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.lateralityInput).easyAutocomplete(options);
+            $(DOMStrings.lateralityInput).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.lateralityInput);
+            });
         },
         setupFindings: function (searchData) {
             var options = {
@@ -268,7 +283,7 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }, 
+                    },
                     onChooseEvent: function () {
                         var finding = $(DOMStrings.findingsInput).val();
                         searchData.find(function (element) {
@@ -286,7 +301,9 @@ var UICtrl = (function () {
                 theme: "plate-dark"
             };
 
-            $(DOMStrings.findingsInput).easyAutocomplete(options);
+            $(DOMStrings.findingsInput).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.findingsInput);
+            });
         },
         setupSubanatomy: function (searchData) {
             var options = {
@@ -309,7 +326,9 @@ var UICtrl = (function () {
                 theme: "plate-dark"
             };
 
-            $(DOMStrings.subanatomyInput).easyAutocomplete(options);
+            $(DOMStrings.subanatomyInput).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.subanatomyInput);
+            });
         },
         setupMajorAnatomy: function (searchData) {
 
@@ -336,7 +355,9 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.majorAnatomyInput).easyAutocomplete(options);
+            $(DOMStrings.majorAnatomyInput).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.majorAnatomyInput);
+            });
         }
     }
 })();

@@ -1,3 +1,271 @@
+// ANNOTATION CONTROLLER
+var AnnotationCtrl = (function () {
+    var cxr_template = {
+        "col": [
+            "Major Anatomic Regions",
+            "Subanatomy",
+            "Laterality Modifier",
+            "Location Modifier",
+            "Findings",
+            "Character Modifiers",
+            "Number of anomalies",
+            "Size Modifiers"
+        ],
+        "annotation-rows": [
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "Peripheral" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "Central" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+            {
+                row: [
+                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
+                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
+                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
+                    { "col-title": "Location Modifier", "value": "None" },
+                    { "col-title": "Findings", "value": "Alveolar Opacity" },
+                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
+                    { "col-title": "Number of anomalies", "value": "NA" },
+                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
+                ]
+            },
+        ]
+    };
+
+    return {
+        getColumns: function () {
+            return cxr_template.col;
+        },
+        getRows: function () {
+            return cxr_template['annotation-rows'];
+        }
+    }
+})();
+
+// SEARCH DATA CONTROLLER
 var SearchCtrl = (function () {
     var data = {
         "Major Anatomic Region": [

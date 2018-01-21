@@ -508,7 +508,7 @@ var UICtrl = (function () {
         tr: 'tr',
         td: 'td',
         tableDiv: '.annotation-table',
-        majorAnatomyInput: '#major-anatomry',
+        majorAnatomyInput: '#anatomy',
         subanatomyInput: '#subanatomy',
         findingsInput: '#findings',
         lateralityInput: '#laterality',

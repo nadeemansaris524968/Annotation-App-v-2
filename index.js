@@ -508,13 +508,13 @@ var UICtrl = (function () {
         tr: 'tr',
         td: 'td',
         tableDiv: '.annotation-table',
-        numberModifierInput: '#number-modifiers',
-        characterInput: '#character',
-        locationInput: '#location',
-        lateralityInput: '#laterality',
-        findingsInput: '#findings',
-        subanatomyInput: '#subanatomy',
         majorAnatomyInput: '#major-anatomry',
+        subanatomyInput: '#subanatomy',
+        findingsInput: '#findings',
+        lateralityInput: '#laterality',
+        locationInput: '#location',
+        characterInput: '#character',
+        numberModifierInput: '#number-modifiers',
         addAnnotation: '#addRow'
     };
 

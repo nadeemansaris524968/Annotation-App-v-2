@@ -669,7 +669,22 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.numModifier);
             });
         },
-        setupCharacter: function (searchData) {
+        setupCharacter_2: function (searchData) {
+            var options = {
+                data: searchData,
+                getValue: "name",
+                list: {
+                    match: {
+                        enabled: true
+                    }
+                }
+            };
+
+            $(DOMStrings.character_2).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.character_2);
+            });
+        },
+        setupCharacter_1: function (searchData) {
             var options = {
                 data: searchData,
                 getValue: "name",
@@ -684,7 +699,22 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.character_1);
             });
         },
-        setupLocation: function (searchData) {
+        setupLocation_2: function (searchData) {
+            var options = {
+                data: searchData,
+                getValue: "name",
+                list: {
+                    match: {
+                        enabled: true
+                    }
+                }
+            };
+
+            $(DOMStrings.location_2).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.location_2);
+            });
+        },
+        setupLocation_1: function (searchData) {
             var options = {
                 data: searchData,
                 getValue: "name",
@@ -726,8 +756,18 @@ var UICtrl = (function () {
                         var subanatomy = $(DOMStrings.subanatomy).val();
                         searchData.find(function (element) {
                             if (element.name === subanatomy) {
-                                // var findings = element["Findings"];
-                                // UICtrl.setupFindings(findings);
+                                var laterality = element["Laterality Modifier"];
+                                var location_1 = element["Location Modifier 1"];
+                                var location_2 = element["Location Modifier 2"];
+                                var character_1 = element["Character Modifiers 1"];
+                                var character_2 = element["Character Modifiers 2"];
+                                var numModifier = element["# Modifiers"];
+                                UICtrl.setupLaterality(laterality);
+                                UICtrl.setupLocation_1(location_1);
+                                UICtrl.setupLocation_2(location_2);
+                                UICtrl.setupCharacter_1(character_1);
+                                UICtrl.setupCharacter_2(character_2);
+                                UICtrl.setupNumberModifiers(numModifier);
                             }
                         });
                     }
@@ -751,14 +791,6 @@ var UICtrl = (function () {
                         var finding = $(DOMStrings.findings).val();
                         searchData.find(function (element) {
                             if (element.name === finding) {
-                                // var laterality = element["Laterality Modifier"];
-                                // var location = element["Location Modifier"];
-                                // var character = element["Character Modifiers"];
-                                // var numberModifiers = element["# Modifiers"];
-                                // UICtrl.setupLaterality(laterality);
-                                // UICtrl.setupLocation(location);
-                                // UICtrl.setupCharacter(character);
-                                // UICtrl.setupNumberModifiers(numberModifiers);
                                 var subanatomy = element["Subanatomy"];
                                 UICtrl.setupSubanatomy(subanatomy);
                             }

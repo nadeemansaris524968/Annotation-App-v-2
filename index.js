@@ -512,9 +512,9 @@ var UICtrl = (function () {
         subanatomy: '#subanatomy',
         findings: '#findings',
         laterality: '#laterality',
-        location: '#location',
-        character: '#character',
-        numModifier: '#number-modifiers',
+        location_1: '#location_1',
+        character_1: '#character_1',
+        numModifier: '#numModifier',
         addAnnotation: '#addRow'
     };
 
@@ -631,8 +631,8 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.character).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.character);
+            $(DOMStrings.character_1).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.character_1);
             });
         },
         setupLocation: function (searchData) {
@@ -646,8 +646,8 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.location).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.location);
+            $(DOMStrings.location_1).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.location_1);
             });
         },
         setupLaterality: function (searchData) {

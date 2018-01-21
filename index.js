@@ -467,7 +467,7 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.size_1);
             });
         },
-        setupNumberModifiers: function (searchData) {
+        setupNumModifier: function (searchData) {
             var options = {
                 data: searchData,
                 getValue: "name",
@@ -599,7 +599,7 @@ var UICtrl = (function () {
                                 UICtrl.setupCharacter_1(character_1);
                                 UICtrl.setupCharacter_2(character_2);
                                 UICtrl.setupSeverity(severity);
-                                UICtrl.setupNumberModifiers(numModifier);
+                                UICtrl.setupNumModifier(numModifier);
                                 UICtrl.setupSize_1(size_1);
                                 UICtrl.setupSize_2(size_2);
                             }
@@ -638,7 +638,7 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.findings);
             });
         },
-        setupMajorAnatomy: function (searchData) {
+        setupAnatomy: function (searchData) {
 
             var options = {
                 data: searchData,
@@ -713,7 +713,7 @@ var controller = (function () {
         init: function () {
             console.log('Application Started');
             var data = SearchCtrl.getSearchData();
-            UICtrl.setupMajorAnatomy(data);
+            UICtrl.setupAnatomy(data);
             UICtrl.setupAddAnnotationRow();
             UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();

@@ -437,6 +437,36 @@ var UICtrl = (function () {
     };
 
     return {
+        setupSize_2: function (searchData) {
+            var options = {
+                data: searchData,
+                getValue: "name",
+                list: {
+                    match: {
+                        enabled: true
+                    }
+                }
+            };
+
+            $(DOMStrings.size_2).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.size_2);
+            });
+        },
+        setupSize_1: function (searchData) {
+            var options = {
+                data: searchData,
+                getValue: "name",
+                list: {
+                    match: {
+                        enabled: true
+                    }
+                }
+            };
+
+            $(DOMStrings.size_1).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.size_1);
+            });
+        },
         setupNumberModifiers: function (searchData) {
             var options = {
                 data: searchData,
@@ -561,6 +591,8 @@ var UICtrl = (function () {
                                 var character_2 = element["Character Modifiers 2"];
                                 var severity = element["Severity Modifier"];
                                 var numModifier = element["# Modifiers"];
+                                var size_1 = element["Size Modifiers Qualitative"];
+                                var size_2 = element["Size Modifiers Quantitative"];
                                 UICtrl.setupLaterality(laterality);
                                 UICtrl.setupLocation_1(location_1);
                                 UICtrl.setupLocation_2(location_2);
@@ -568,6 +600,8 @@ var UICtrl = (function () {
                                 UICtrl.setupCharacter_2(character_2);
                                 UICtrl.setupSeverity(severity);
                                 UICtrl.setupNumberModifiers(numModifier);
+                                UICtrl.setupSize_1(size_1);
+                                UICtrl.setupSize_2(size_2);
                             }
                         });
                     }

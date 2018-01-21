@@ -281,6 +281,23 @@ var SearchCtrl = (function () {
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
+                                "Location Modifier" : [
+                                    { "name" : "1"}, 
+                                    {"name": "2"}, 
+                                    { "name": "3"},
+                                    { "name": "4"},
+                                    { "name": "5"},
+                                    { "name": "6"},
+                                    { "name": "7"},
+                                    { "name": "8"},
+                                    { "name": "9"},
+                                    { "name": "10"},
+                                    { "name": "11"},
+                                    { "name": "12"},
+                                    { "name": "Posterior"},
+                                    { "name": "Lateral"},
+                                    { "name": "Anterior"}
+                                ],
                                 "Character Modifiers": [
                                     { "name": "Non-displaced" },
                                     { "name": "Displaced" },
@@ -493,10 +510,12 @@ var UICtrl = (function () {
         tableDiv: '.annotation-table',
         numberModifierInput: '#number-modifiers',
         characterInput: '#character',
+        locationInput: '#location',
         lateralityInput: '#laterality',
         findingsInput: '#findings',
         subanatomyInput: '#subanatomy',
-        majorAnatomyInput: '#major-anatomry'
+        majorAnatomyInput: '#major-anatomry',
+        addAnnotation: '#addRow'
     };
 
     var createTblHeading = function (colNames) {
@@ -616,6 +635,21 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.characterInput);
             });
         },
+        setupLocation: function (searchData) {
+            var options = {
+                data: searchData,
+                getValue: "name",
+                list: {
+                    match: {
+                        enabled: true
+                    }
+                }
+            };
+
+            $(DOMStrings.locationInput).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.locationInput);
+            });
+        },
         setupLaterality: function (searchData) {
             var options = {
                 data: searchData,
@@ -644,9 +678,11 @@ var UICtrl = (function () {
                         searchData.find(function (element) {
                             if (element.name === finding) {
                                 var laterality = element["Laterality Modifier"];
+                                var location = element["Location Modifier"];
                                 var character = element["Character Modifiers"];
                                 var numberModifiers = element["# Modifiers"];
                                 UICtrl.setupLaterality(laterality);
+                                UICtrl.setupLocation(location);
                                 UICtrl.setupCharacter(character);
                                 UICtrl.setupNumberModifiers(numberModifiers);
                             }
@@ -714,6 +750,17 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.majorAnatomyInput);
             });
         },
+        setupAddAnnotationRow: function () {
+            $(DOMStrings.addAnnotation).on('click', function () {
+                var allInputs = document.querySelectorAll('input[type="text"]');
+                var rowData = [];
+                
+                allInputs.forEach(function (input) {
+                    rowData.push(input.value);
+                });
+                console.log('Input values: ', JSON.stringify(rowData, undefined, 2));
+            });
+        },
         createTbl: function (colNames, annotationRows) {
             createTblHeading(colNames);
             createTblBody(annotationRows);
@@ -750,6 +797,7 @@ var controller = (function () {
             console.log('Application Started');
             var data = SearchCtrl.getSearchData();
             UICtrl.setupMajorAnatomy(data);
+            UICtrl.setupAddAnnotationRow();
             UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();
             UICtrl.placeDT();

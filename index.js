@@ -513,7 +513,9 @@ var UICtrl = (function () {
         findings: '#findings',
         laterality: '#laterality',
         location_1: '#location_1',
+        location_2: '#location_2',
         character_1: '#character_1',
+        character_2: '#character_2',
         numModifier: '#numModifier',
         addAnnotation: '#addRow'
     };

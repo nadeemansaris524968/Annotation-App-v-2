@@ -343,7 +343,10 @@ var UICtrl = (function () {
         location_2: '#location_2',
         character_1: '#character_1',
         character_2: '#character_2',
+        severity: '#severity',
         numModifier: '#numModifier',
+        size_1: '#size_1',
+        size_2: '#size_2',
         addAnnotation: '#addRow'
     };
 

@@ -714,37 +714,6 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.laterality);
             });
         },
-        setupFindings: function (searchData) {
-            var options = {
-                data: searchData,
-                getValue: "name",
-                list: {
-                    match: {
-                        enabled: true
-                    },
-                    onChooseEvent: function () {
-                        var finding = $(DOMStrings.findings).val();
-                        searchData.find(function (element) {
-                            if (element.name === finding) {
-                                var laterality = element["Laterality Modifier"];
-                                var location = element["Location Modifier"];
-                                var character = element["Character Modifiers"];
-                                var numberModifiers = element["# Modifiers"];
-                                UICtrl.setupLaterality(laterality);
-                                UICtrl.setupLocation(location);
-                                UICtrl.setupCharacter(character);
-                                UICtrl.setupNumberModifiers(numberModifiers);
-                            }
-                        });
-                    }
-                },
-                theme: "plate-dark"
-            };
-
-            $(DOMStrings.findings).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.findings);
-            });
-        },
         setupSubanatomy: function (searchData) {
             var options = {
                 data: searchData,
@@ -757,8 +726,8 @@ var UICtrl = (function () {
                         var subanatomy = $(DOMStrings.subanatomy).val();
                         searchData.find(function (element) {
                             if (element.name === subanatomy) {
-                                var findings = element["Findings"];
-                                UICtrl.setupFindings(findings);
+                                // var findings = element["Findings"];
+                                // UICtrl.setupFindings(findings);
                             }
                         });
                     }
@@ -768,6 +737,39 @@ var UICtrl = (function () {
 
             $(DOMStrings.subanatomy).easyAutocomplete(options).focus(function () {
                 triggerFocus(DOMStrings.subanatomy);
+            });
+        },
+        setupFindings: function (searchData) {
+            var options = {
+                data: searchData,
+                getValue: "name",
+                list: {
+                    match: {
+                        enabled: true
+                    },
+                    onChooseEvent: function () {
+                        var finding = $(DOMStrings.findings).val();
+                        searchData.find(function (element) {
+                            if (element.name === finding) {
+                                // var laterality = element["Laterality Modifier"];
+                                // var location = element["Location Modifier"];
+                                // var character = element["Character Modifiers"];
+                                // var numberModifiers = element["# Modifiers"];
+                                // UICtrl.setupLaterality(laterality);
+                                // UICtrl.setupLocation(location);
+                                // UICtrl.setupCharacter(character);
+                                // UICtrl.setupNumberModifiers(numberModifiers);
+                                var subanatomy = element["Subanatomy"];
+                                UICtrl.setupSubanatomy(subanatomy);
+                            }
+                        });
+                    }
+                },
+                theme: "plate-dark"
+            };
+
+            $(DOMStrings.findings).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.findings);
             });
         },
         setupMajorAnatomy: function (searchData) {

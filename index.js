@@ -509,12 +509,12 @@ var UICtrl = (function () {
         td: 'td',
         tableDiv: '.annotation-table',
         anatomy: '#anatomy',
-        subanatomyInput: '#subanatomy',
-        findingsInput: '#findings',
-        lateralityInput: '#laterality',
-        locationInput: '#location',
-        characterInput: '#character',
-        numberModifierInput: '#number-modifiers',
+        subanatomy: '#subanatomy',
+        findings: '#findings',
+        laterality: '#laterality',
+        location: '#location',
+        character: '#character',
+        numModifier: '#number-modifiers',
         addAnnotation: '#addRow'
     };
 
@@ -616,8 +616,8 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.numberModifierInput).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.numberModifierInput);
+            $(DOMStrings.numModifier).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.numModifier);
             });
         },
         setupCharacter: function (searchData) {
@@ -631,8 +631,8 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.characterInput).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.characterInput);
+            $(DOMStrings.character).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.character);
             });
         },
         setupLocation: function (searchData) {
@@ -646,8 +646,8 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.locationInput).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.locationInput);
+            $(DOMStrings.location).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.location);
             });
         },
         setupLaterality: function (searchData) {
@@ -661,8 +661,8 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.lateralityInput).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.lateralityInput);
+            $(DOMStrings.laterality).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.laterality);
             });
         },
         setupFindings: function (searchData) {
@@ -674,7 +674,7 @@ var UICtrl = (function () {
                         enabled: true
                     },
                     onChooseEvent: function () {
-                        var finding = $(DOMStrings.findingsInput).val();
+                        var finding = $(DOMStrings.findings).val();
                         searchData.find(function (element) {
                             if (element.name === finding) {
                                 var laterality = element["Laterality Modifier"];
@@ -692,8 +692,8 @@ var UICtrl = (function () {
                 theme: "plate-dark"
             };
 
-            $(DOMStrings.findingsInput).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.findingsInput);
+            $(DOMStrings.findings).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.findings);
             });
         },
         setupSubanatomy: function (searchData) {
@@ -705,7 +705,7 @@ var UICtrl = (function () {
                         enabled: true
                     },
                     onChooseEvent: function () {
-                        var subanatomy = $(DOMStrings.subanatomyInput).val();
+                        var subanatomy = $(DOMStrings.subanatomy).val();
                         searchData.find(function (element) {
                             if (element.name === subanatomy) {
                                 var findings = element["Findings"];
@@ -717,8 +717,8 @@ var UICtrl = (function () {
                 theme: "plate-dark"
             };
 
-            $(DOMStrings.subanatomyInput).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.subanatomyInput);
+            $(DOMStrings.subanatomy).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.subanatomy);
             });
         },
         setupMajorAnatomy: function (searchData) {

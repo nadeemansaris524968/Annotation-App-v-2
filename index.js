@@ -508,7 +508,7 @@ var UICtrl = (function () {
         tr: 'tr',
         td: 'td',
         tableDiv: '.annotation-table',
-        majorAnatomyInput: '#anatomy',
+        anatomy: '#anatomy',
         subanatomyInput: '#subanatomy',
         findingsInput: '#findings',
         lateralityInput: '#laterality',
@@ -734,7 +734,7 @@ var UICtrl = (function () {
                         enabled: true
                     },
                     onChooseEvent: function () {
-                        var majorAnatomy = $(DOMStrings.majorAnatomyInput).val();
+                        var majorAnatomy = $(DOMStrings.anatomy).val();
 
                         searchData["Major Anatomic Region"].find(function (element) {
                             if (element.name === majorAnatomy) {
@@ -746,8 +746,8 @@ var UICtrl = (function () {
                 }
             };
 
-            $(DOMStrings.majorAnatomyInput).easyAutocomplete(options).focus(function () {
-                triggerFocus(DOMStrings.majorAnatomyInput);
+            $(DOMStrings.anatomy).easyAutocomplete(options).focus(function () {
+                triggerFocus(DOMStrings.anatomy);
             });
         },
         setupAddAnnotationRow: function () {

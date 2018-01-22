@@ -5505,15 +5505,19 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.anatomy);
             });
         },
-        setupAddAnnotationRow: function () {
+        addAnnotationRow: function () {
             $(DOMStrings.addAnnotation).on('click', function () {
                 var allInputs = document.querySelectorAll('input[type="text"]');
-                var rowData = [];
+                var tr = document.createElement(DOMStrings.tr);
 
                 allInputs.forEach(function (input) {
-                    rowData.push(input.value);
+                    var td = document.createElement(DOMStrings.td);
+                    var cellText = document.createTextNode(input.value);
+                    td.appendChild(cellText);
+                    tr.appendChild(td);
                 });
-                console.log('Input values: ', JSON.stringify(rowData, undefined, 2));
+                
+                console.log('Inout row: ', tr);
             });
         },
         createTbl: function (colNames, annotationRows) {
@@ -5552,7 +5556,7 @@ var controller = (function () {
             console.log('Application Started');
             var data = SearchCtrl.getSearchData();
             UICtrl.setupAnatomy(data);
-            UICtrl.setupAddAnnotationRow();
+            UICtrl.addAnnotationRow();
             UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();
             UICtrl.placeDT();

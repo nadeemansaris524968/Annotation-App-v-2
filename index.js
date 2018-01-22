@@ -5516,8 +5516,14 @@ var UICtrl = (function () {
                     td.appendChild(cellText);
                     tr.appendChild(td);
                 });
-
+                var deleteBtnTd = document.createElement('td');
+                var rowDeleteBtn = document.createElement('button');
+                rowDeleteBtn.appendChild(document.createTextNode('Delete'));
+    
+                deleteBtnTd.appendChild(rowDeleteBtn);
+                tr.appendChild(deleteBtnTd);
                 console.log('Inout row: ', tr);
+                // var rowNode = table.row.add(tr).draw().node();
             });
         },
         createTbl: function (colNames, annotationRows) {

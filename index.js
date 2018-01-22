@@ -2,258 +2,494 @@
 var AnnotationCtrl = (function () {
     var cxr_template = {
         "col": [
+            "Annotator_ID",
+            "CXR_dataset",
+            "CXR_ID",
+            "CXR_observation_#",
             "Major Anatomic Regions",
+            "Findings",
             "Subanatomy",
             "Laterality Modifier",
-            "Location Modifier",
-            "Findings",
-            "Character Modifiers",
-            "Number of anomalies",
-            "Size Modifiers"
+            "Location Modifier 1",
+            "Location Modifier 2",
+            "Character Modifiers 1",
+            "Character Modifiers 2",
+            "Severity Modifier",
+            "# Modifiers",
+            "Size Modifiers Qualitative",
+            "Size Modifiers Quantitative"
         ],
-        "annotation-rows": [
-            {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "Peripheral" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+        "annotation-rows": [{
+            "row": [{
+                "col-title": "Annotator_ID",
+                "value": "Joy"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "Central" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "CXR_dataset",
+                "value": "Indiana"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "CXR_ID",
+                "value": "CXR10_IM-0002-2001"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "CXR_observation_#",
+                "value": "1"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Major Anatomic Regions",
+                "value": "Lungs"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Findings",
+                "value": "Mass/Nodule"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Subanatomy",
+                "value": "Upper lung zone"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Laterality Modifier",
+                "value": "Right"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Location Modifier 1",
+                "value": "NA"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Location Modifier 2",
+                "value": "NA"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Character Modifiers 1",
+                "value": "Non-cavitary"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Character Modifiers 2",
+                "value": "Non-calcified"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Severity Modifier",
+                "value": "NA"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "# Modifiers",
+                "value": "Solitary"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Size Modifiers Qualitative",
+                "value": "Small"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Size Modifiers Quantitative",
+                "value": "NA"
+            }
+            ]
+        },
+        {
+            "row": [{
+                "col-title": "Annotator_ID",
+                "value": "Joy"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "CXR_dataset",
+                "value": "Indiana"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "CXR_ID",
+                "value": "CXR10_IM-0002-2001"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "CXR_observation_#",
+                "value": "2"
             },
             {
-                row: [
-                    { "col-title": "Major Anatomic Regions", "value": "Lungs" },
-                    { "col-title": "Subanatomy", "value": "Upper lung zone" },
-                    { "col-title": "Laterality Modifier", "value": "Bilateral" },
-                    { "col-title": "Location Modifier", "value": "None" },
-                    { "col-title": "Findings", "value": "Alveolar Opacity" },
-                    { "col-title": "Character Modifiers", "value": "No, faint, moderately dense,  very dense" },
-                    { "col-title": "Number of anomalies", "value": "NA" },
-                    { "col-title": "Size Modifiers", "value": "Small, Medium, Large" }
-                ]
+                "col-title": "Major Anatomic Regions",
+                "value": "Pleura"
             },
+            {
+                "col-title": "Findings",
+                "value": "None"
+            },
+            {
+                "col-title": "Subanatomy",
+                "value": "NA"
+            },
+            {
+                "col-title": "Laterality Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Severity Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "# Modifiers",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Qualitative",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Quantitative",
+                "value": "NA"
+            }
+            ]
+        },
+        {
+            "row": [{
+                "col-title": "Annotator_ID",
+                "value": "Joy"
+            },
+            {
+                "col-title": "CXR_dataset",
+                "value": "Indiana"
+            },
+            {
+                "col-title": "CXR_ID",
+                "value": "CXR10_IM-0002-2001"
+            },
+            {
+                "col-title": "CXR_observation_#",
+                "value": "3"
+            },
+            {
+                "col-title": "Major Anatomic Regions",
+                "value": "Major airways"
+            },
+            {
+                "col-title": "Findings",
+                "value": "None"
+            },
+            {
+                "col-title": "Subanatomy",
+                "value": "NA"
+            },
+            {
+                "col-title": "Laterality Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Severity Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "# Modifiers",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Qualitative",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Quantitative",
+                "value": "NA"
+            }
+            ]
+        },
+        {
+            "row": [{
+                "col-title": "Annotator_ID",
+                "value": "Joy"
+            },
+            {
+                "col-title": "CXR_dataset",
+                "value": "Indiana"
+            },
+            {
+                "col-title": "CXR_ID",
+                "value": "CXR10_IM-0002-2001"
+            },
+            {
+                "col-title": "CXR_observation_#",
+                "value": "4"
+            },
+            {
+                "col-title": "Major Anatomic Regions",
+                "value": "Mediastinum"
+            },
+            {
+                "col-title": "Findings",
+                "value": "None"
+            },
+            {
+                "col-title": "Subanatomy",
+                "value": "NA"
+            },
+            {
+                "col-title": "Laterality Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Severity Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "# Modifiers",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Qualitative",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Quantitative",
+                "value": "NA"
+            }
+            ]
+        },
+        {
+            "row": [{
+                "col-title": "Annotator_ID",
+                "value": "Joy"
+            },
+            {
+                "col-title": "CXR_dataset",
+                "value": "Indiana"
+            },
+            {
+                "col-title": "CXR_ID",
+                "value": "CXR10_IM-0002-2001"
+            },
+            {
+                "col-title": "CXR_observation_#",
+                "value": "5"
+            },
+            {
+                "col-title": "Major Anatomic Regions",
+                "value": "Vasculature"
+            },
+            {
+                "col-title": "Findings",
+                "value": "None"
+            },
+            {
+                "col-title": "Subanatomy",
+                "value": "NA"
+            },
+            {
+                "col-title": "Laterality Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Severity Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "# Modifiers",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Qualitative",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Quantitative",
+                "value": "NA"
+            }
+            ]
+        },
+        {
+            "row": [{
+                "col-title": "Annotator_ID",
+                "value": "Joy"
+            },
+            {
+                "col-title": "CXR_dataset",
+                "value": "Indiana"
+            },
+            {
+                "col-title": "CXR_ID",
+                "value": "CXR10_IM-0002-2001"
+            },
+            {
+                "col-title": "CXR_observation_#",
+                "value": "6"
+            },
+            {
+                "col-title": "Major Anatomic Regions",
+                "value": "Bones"
+            },
+            {
+                "col-title": "Findings",
+                "value": "Scoliosis"
+            },
+            {
+                "col-title": "Subanatomy",
+                "value": "Thoracic spine"
+            },
+            {
+                "col-title": "Laterality Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 1",
+                "value": "Left convex"
+            },
+            {
+                "col-title": "Character Modifiers 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Severity Modifier",
+                "value": "Mild"
+            },
+            {
+                "col-title": "# Modifiers",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Qualitative",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Quantitative",
+                "value": "NA"
+            }
+            ]
+        },
+        {
+            "row": [{
+                "col-title": "Annotator_ID",
+                "value": "Joy"
+            },
+            {
+                "col-title": "CXR_dataset",
+                "value": "Indiana"
+            },
+            {
+                "col-title": "CXR_ID",
+                "value": "CXR10_IM-0002-2001"
+            },
+            {
+                "col-title": "CXR_observation_#",
+                "value": "7"
+            },
+            {
+                "col-title": "Major Anatomic Regions",
+                "value": "Other"
+            },
+            {
+                "col-title": "Findings",
+                "value": "None"
+            },
+            {
+                "col-title": "Subanatomy",
+                "value": "NA"
+            },
+            {
+                "col-title": "Laterality Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Location Modifier 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 1",
+                "value": "NA"
+            },
+            {
+                "col-title": "Character Modifiers 2",
+                "value": "NA"
+            },
+            {
+                "col-title": "Severity Modifier",
+                "value": "NA"
+            },
+            {
+                "col-title": "# Modifiers",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Qualitative",
+                "value": "NA"
+            },
+            {
+                "col-title": "Size Modifiers Quantitative",
+                "value": "NA"
+            }
+            ]
+        }
         ]
-    };
+    } ;
 
     return {
         getColumns: function () {
@@ -1746,7 +1982,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -1780,7 +2016,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Mid Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -1814,7 +2050,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -1848,7 +2084,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "All Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -1887,7 +2123,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -1922,7 +2158,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -1962,7 +2198,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "HILA",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -1999,7 +2235,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -2034,7 +2270,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Mid Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -2069,7 +2305,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -2109,7 +2345,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Hila",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -2148,7 +2384,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "All Lung Zones",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
+                                    { "name": "Bilateral" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2186,8 +2422,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2220,8 +2456,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2254,7 +2490,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "All Lung Zones",
                                 "Laterality Modifier": [
-                                    { "name" : "Left"}
+                                    { "name": "Left" }
                                 ],
                                 "Location Modifier 1": [
                                     { "name": "NA" }
@@ -2291,8 +2527,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "All Lung Zones",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2330,8 +2566,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2364,8 +2600,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2398,7 +2634,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "All Lung Zones",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"}
+                                    { "name": "Bilateral" }
                                 ],
                                 "Location Modifier 1": [
                                     { "name": "NA" }
@@ -2435,8 +2671,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2469,8 +2705,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2503,7 +2739,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "All Lung Zones",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"}
+                                    { "name": "Bilateral" }
                                 ],
                                 "Location Modifier 1": [
                                     { "name": "NA" }
@@ -2540,8 +2776,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2579,8 +2815,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Mid Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2618,8 +2854,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2662,8 +2898,8 @@ var SearchCtrl = (function () {
                             {
                                 "name": "All Lung Zones",
                                 "Laterality Modifier": [
-                                    { "name" : "Bilateral"},
-                                    { "name" : "Left"},
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -2701,7 +2937,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "NA",
                                 "Laterality Modifier": [
-                                    { "name" : "Left"},
+                                    { "name": "Left" },
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
@@ -4821,7 +5057,7 @@ var SearchCtrl = (function () {
                                 "Location Modifier 1": [
                                     { "name": "Apical" },
                                     { "name": "Basilar/Diaphragmatic" },
-                                    { "name": "NA" }                                
+                                    { "name": "NA" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "NA" }
@@ -4861,7 +5097,7 @@ var SearchCtrl = (function () {
                                 "Location Modifier 1": [
                                     { "name": "Apical" },
                                     { "name": "Basilar/Diaphragmatic" },
-                                    { "name": "NA" }                                
+                                    { "name": "NA" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "NA" }
@@ -4991,12 +5227,13 @@ var UICtrl = (function () {
     var createDT = function () {
         table = $(DOMStrings.table).DataTable({
             "paging": false,
-            "scrollY": "400px"
+            "scrollY": "400px",
+            "scrollX": true
         });
 
         // Fix for enabling vertical scroll
-        $('.dataTables_scrollHeadInner').css("width", "100%");
-        $('div.dataTables_scrollHeadInner > table').css("width", "100%");
+        // $('.dataTables_scrollHeadInner').css("width", "100%");
+        // $('div.dataTables_scrollHeadInner > table').css("width", "100%");
 
         $('#annotation-table tbody').on('click', 'button', function () {
             table

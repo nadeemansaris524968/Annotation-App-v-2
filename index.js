@@ -2733,6 +2733,239 @@ var SearchCtrl = (function () {
                         ]
                     }
                 ]
+            },
+            {
+                "name": "Major Airways",
+                "Findings": [
+                    {
+                        "name": "Tracheal deformity",
+                        "Subanatomy": [
+                            {
+                                "name": "Trachea",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Upper" },
+                                    { "name": "Mid" },
+                                    { "name": "Lower" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Narrowed" },
+                                    { "name": "Dilated" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Tracheal displacement",
+                        "Subanatomy": [
+                            {
+                                "name": "Trachea",
+                                "Laterality Modifier": [
+                                    { "name": "Leftward" },
+                                    { "name": "Rightward" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Upper" },
+                                    { "name": "Mid" },
+                                    { "name": "Lower" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Mainstem bronchus deformity",
+                        "Subanatomy": [
+                            {
+                                "name": "Mainstem bronchus",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Narrowed" },
+                                    { "name": "Dilated" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Mainstem bronchus displacement",
+                        "Subanatomy": [
+                            {
+                                "name": "Mainstem bronchus",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Upward" },
+                                    { "name": "Downward" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Bronchial cut-off",
+                        "Subanatomy": [
+                            {
+                                "name": "Mainstem bronchus",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Endobronchial lesion",
+                        "Subanatomy": [
+                            {
+                                "name": "Mainstem bronchus",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     };

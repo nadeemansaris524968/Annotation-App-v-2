@@ -1717,8 +1717,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.size_2).easyAutocomplete(options).focus(function () {
@@ -1732,8 +1734,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.size_1).easyAutocomplete(options).focus(function () {
@@ -1747,8 +1751,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.numModifier).easyAutocomplete(options).focus(function () {
@@ -1762,8 +1768,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.severity).easyAutocomplete(options).focus(function () {
@@ -1777,8 +1785,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.character_2).easyAutocomplete(options).focus(function () {
@@ -1792,8 +1802,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.character_1).easyAutocomplete(options).focus(function () {
@@ -1807,8 +1819,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.location_2).easyAutocomplete(options).focus(function () {
@@ -1822,8 +1836,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.location_1).easyAutocomplete(options).focus(function () {
@@ -1837,8 +1853,10 @@ var UICtrl = (function () {
                 list: {
                     match: {
                         enabled: true
-                    }
-                }
+                    },
+                    maxNumberOfElements: 50
+                },
+                theme: "square"
             };
 
             $(DOMStrings.laterality).easyAutocomplete(options).focus(function () {
@@ -1853,6 +1871,7 @@ var UICtrl = (function () {
                     match: {
                         enabled: true
                     },
+                    maxNumberOfElements: 50,
                     onChooseEvent: function () {
                         var subanatomy = $(DOMStrings.subanatomy).val();
                         searchData.find(function (element) {
@@ -1879,7 +1898,7 @@ var UICtrl = (function () {
                         });
                     }
                 },
-                theme: "plate-dark"
+                theme: "square"
             };
 
             $(DOMStrings.subanatomy).easyAutocomplete(options).focus(function () {
@@ -1894,6 +1913,7 @@ var UICtrl = (function () {
                     match: {
                         enabled: true
                     },
+                    maxNumberOfElements: 50,
                     onChooseEvent: function () {
                         var finding = $(DOMStrings.findings).val();
                         searchData.find(function (element) {
@@ -1904,7 +1924,7 @@ var UICtrl = (function () {
                         });
                     }
                 },
-                theme: "plate-dark"
+                theme: "square"
             };
 
             $(DOMStrings.findings).easyAutocomplete(options).focus(function () {
@@ -1923,6 +1943,7 @@ var UICtrl = (function () {
                     match: {
                         enabled: true
                     },
+                    maxNumberOfElements: 50,
                     onChooseEvent: function () {
                         var majorAnatomy = $(DOMStrings.anatomy).val();
 
@@ -1933,7 +1954,8 @@ var UICtrl = (function () {
                             }
                         });
                     }
-                }
+                },
+                theme: "square"
             };
 
             $(DOMStrings.anatomy).easyAutocomplete(options).focus(function () {

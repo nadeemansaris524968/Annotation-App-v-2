@@ -1584,6 +1584,1212 @@ var SearchCtrl = (function () {
                         ]
                     }
                 ]
+            },
+            {
+                "name": "Lungs",
+                "Findings": [
+                    {
+                        "name": "Alveolar opacity",
+                        "Subanatomy": [
+                            {
+                                "name": "Upper Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Peripheral" },
+                                    { "name": "Central" },
+                                    { "name": "Peripheral and Central" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Faint" },
+                                    { "name": "Moderately dense" },
+                                    { "name": "Very dense" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            },
+                            {
+                                "name": "Mid Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Peripheral" },
+                                    { "name": "Central" },
+                                    { "name": "Peripheral and Central" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Faint" },
+                                    { "name": "Moderately dense" },
+                                    { "name": "Very dense" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            },
+                            {
+                                "name": "Lower Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Peripheral" },
+                                    { "name": "Central" },
+                                    { "name": "Peripheral and Central" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Faint" },
+                                    { "name": "Moderately dense" },
+                                    { "name": "Very dense" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            },
+                            {
+                                "name": "All Lung Zones",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Peripheral and Central" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Faint" },
+                                    { "name": "Moderately dense" },
+                                    { "name": "Very dense" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Atelectasis",
+                        "Subanatomy": [
+                            {
+                                "name": "Upper Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name" : "Bilateral"},
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Mid Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name" : "Bilateral"},
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Lower Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name" : "Bilateral"},
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "All Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name" : "Bilateral"},
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Dislocation",
+                        "Subanatomy": [
+                            {
+                                "name": "Acromioclavicular Joint",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild subluxation" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Glenohumeral Joint",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild subluxation" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Fracture",
+                        "Subanatomy": [
+                            {
+                                "name": "Cervical spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "C4" },
+                                    { "name": "C5" },
+                                    { "name": "C5" },
+                                    { "name": "C7" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Body" },
+                                    { "name": "Endplate" },
+                                    { "name": "Transverse process" },
+                                    { "name": "Pedicle" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" },
+                                    { "name": "Compression" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe/Marked" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Clavicle",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Medial" },
+                                    { "name": "Mid" },
+                                    { "name": "Distal" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "Comminuted" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Humerus",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Head" },
+                                    { "name": "Surgical Neck" },
+                                    { "name": "Anatomic neck" },
+                                    { "name": "Diaphysis" },
+                                    { "name": "Greater tuberosity" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "Comminuted" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Lumbar Spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "L1" },
+                                    { "name": "L2" },
+                                    { "name": "L3" },
+                                    { "name": "L4" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Body" },
+                                    { "name": "Endplate" },
+                                    { "name": "Transverse process" },
+                                    { "name": "Pedicle" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" },
+                                    { "name": "Compression" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe/Marked" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Ribs",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "1" },
+                                    { "name": "2" },
+                                    { "name": "3" },
+                                    { "name": "4" },
+                                    { "name": "5" },
+                                    { "name": "6" },
+                                    { "name": "7" },
+                                    { "name": "8" },
+                                    { "name": "9" },
+                                    { "name": "10" },
+                                    { "name": "11" },
+                                    { "name": "12" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Posterior" },
+                                    { "name": "Lateral" },
+                                    { "name": "Anterior" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "Comminuted" },
+                                    { "name": "Segmental" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Scapula",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Spine" },
+                                    { "name": "Body" },
+                                    { "name": "Neck" },
+                                    { "name": "Glenoid" },
+                                    { "name": "Acromion" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "Communited" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Sternum",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Manubrium" },
+                                    { "name": "Body" },
+                                    { "name": "Xiphoid" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "Communited" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Thoracic Spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "T1" },
+                                    { "name": "T2" },
+                                    { "name": "T3" },
+                                    { "name": "T4" },
+                                    { "name": "T5" },
+                                    { "name": "T6" },
+                                    { "name": "T7" },
+                                    { "name": "T8" },
+                                    { "name": "T9" },
+                                    { "name": "T10" },
+                                    { "name": "T11" },
+                                    { "name": "T12" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Body" },
+                                    { "name": "Endplate" },
+                                    { "name": "Transverse process" },
+                                    { "name": "Pedicle" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Non-displaced" },
+                                    { "name": "Displaced" },
+                                    { "name": "Compression" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe/Marked" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Metal bone implant or fixation hardware",
+                        "Subanatomy": [
+                            {
+                                "name": "Cervical spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "C4" },
+                                    { "name": "C5" },
+                                    { "name": "C5" },
+                                    { "name": "C7" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Body" },
+                                    { "name": "Endplate" },
+                                    { "name": "Transverse process" },
+                                    { "name": "Pedicle" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Vertebroplasty" },
+                                    { "name": "Fixation plate and screws" },
+                                    { "name": "Disc replacement" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Clavicle",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Medial" },
+                                    { "name": "Mid" },
+                                    { "name": "Distal" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Fixation wires" },
+                                    { "name": "Fixation plates and screws" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Humerus",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Head" },
+                                    { "name": "Surgical Neck" },
+                                    { "name": "Anatomic neck" },
+                                    { "name": "Diaphysis" },
+                                    { "name": "Greater tuberosity" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Fixation wires" },
+                                    { "name": "Fixation plates and screws" },
+                                    { "name": "Arthroplasty" },
+                                    { "name": "Hemiarthroplasty" },
+                                    { "name": "Intramedullary rods" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Lumbar Spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "L1" },
+                                    { "name": "L2" },
+                                    { "name": "L3" },
+                                    { "name": "L4" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Body" },
+                                    { "name": "Endplate" },
+                                    { "name": "Transverse process" },
+                                    { "name": "Pedicle" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Vertebroplasty" },
+                                    { "name": "Fixation plate and screws" },
+                                    { "name": "Disc replacement" },
+                                    { "name": "Spinal Rods" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Ribs",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "1" },
+                                    { "name": "2" },
+                                    { "name": "3" },
+                                    { "name": "4" },
+                                    { "name": "5" },
+                                    { "name": "6" },
+                                    { "name": "7" },
+                                    { "name": "8" },
+                                    { "name": "9" },
+                                    { "name": "10" },
+                                    { "name": "11" },
+                                    { "name": "12" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Posterior" },
+                                    { "name": "Lateral" },
+                                    { "name": "Anterior" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Fixation Wires" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Scapula",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Spine" },
+                                    { "name": "Body" },
+                                    { "name": "Neck" },
+                                    { "name": "Glenoid" },
+                                    { "name": "Acromion" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Orthopedic hardware" },
+                                    { "name": "Fixation plate and screws" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Sternum",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Manubrium" },
+                                    { "name": "Body" },
+                                    { "name": "Xiphoid" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Sternal Wires" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Thoracic Spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "T1" },
+                                    { "name": "T2" },
+                                    { "name": "T3" },
+                                    { "name": "T4" },
+                                    { "name": "T5" },
+                                    { "name": "T6" },
+                                    { "name": "T7" },
+                                    { "name": "T8" },
+                                    { "name": "T9" },
+                                    { "name": "T10" },
+                                    { "name": "T11" },
+                                    { "name": "T12" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "Body" },
+                                    { "name": "Endplate" },
+                                    { "name": "Transverse process" },
+                                    { "name": "Pedicle" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Vertebroplasty" },
+                                    { "name": "Fixation plate and screws" },
+                                    { "name": "Disc replacement" },
+                                    { "name": "Spinal Rods" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Scoliosis",
+                        "Subanatomy": [
+                            {
+                                "name": "Cervical spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Right Convex" },
+                                    { "name": "Left Convex" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Cobb angle measures:" }
+                                ]
+                            },
+                            {
+                                "name": "Thoracic spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Right Convex" },
+                                    { "name": "Left Convex" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Cobb angle measures:" }
+                                ]
+                            },
+                            {
+                                "name": "Lumbar spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "Right Convex" },
+                                    { "name": "Left Convex" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Cobb angle measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Spinal degenerative changes",
+                        "Subanatomy": [
+                            {
+                                "name": "Cervical spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Thoracic spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            },
+                            {
+                                "name": "Lumbar spine",
+                                "Laterality Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     };

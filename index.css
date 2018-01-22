@@ -18,3 +18,11 @@ body {
 h2 {
     text-align: center;
 }
+
+.easy-autocomplete-container { 
+    max-height: 300px;
+    overflow: auto; 
+    overflow-y: auto; 
+    overflow-x:hidden; 
+}
+

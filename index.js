@@ -5505,7 +5505,7 @@ var UICtrl = (function () {
                 triggerFocus(DOMStrings.anatomy);
             });
         },
-        addAnnotationRow: function () {
+        setupAddAnnotationRow: function () {
             $(DOMStrings.addAnnotation).on('click', function () {
                 var allInputs = document.querySelectorAll('input[type="text"]');
                 var tr = document.createElement(DOMStrings.tr);
@@ -5516,7 +5516,7 @@ var UICtrl = (function () {
                     td.appendChild(cellText);
                     tr.appendChild(td);
                 });
-                
+
                 console.log('Inout row: ', tr);
             });
         },
@@ -5556,7 +5556,7 @@ var controller = (function () {
             console.log('Application Started');
             var data = SearchCtrl.getSearchData();
             UICtrl.setupAnatomy(data);
-            UICtrl.addAnnotationRow();
+            UICtrl.setupAddAnnotationRow();
             UICtrl.createTbl(AnnotationCtrl.getColumns(), AnnotationCtrl.getRows());
             UICtrl.createDataTable();
             UICtrl.placeDT();

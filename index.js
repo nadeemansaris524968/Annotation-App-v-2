@@ -2,494 +2,385 @@
 var AnnotationCtrl = (function () {
     var cxr_template = {
         "col": [
-            "Annotator_ID",
-            "CXR_dataset",
-            "CXR_ID",
-            "CXR_observation_#",
-            "Major Anatomic Regions",
-            "Findings",
-            "Subanatomy",
-            "Laterality Modifier",
-            "Location Modifier 1",
-            "Location Modifier 2",
-            "Character Modifiers 1",
-            "Character Modifiers 2",
-            "Severity Modifier",
-            "# Modifiers",
-            "Size Modifiers Qualitative",
-            "Size Modifiers Quantitative"
+          "Major Anatomic Regions",
+          "Findings",
+          "Subanatomy",
+          "Laterality Modifier",
+          "Location Modifier 1",
+          "Location Modifier 2",
+          "Character Modifiers 1",
+          "Character Modifiers 2",
+          "Severity Modifier",
+          "# Modifiers",
+          "Size Modifiers Qualitative",
+          "Size Modifiers Quantitative"
         ],
         "annotation-rows": [{
-            "row": [{
-                "col-title": "Annotator_ID",
-                "value": "Joy"
-            },
-            {
-                "col-title": "CXR_dataset",
-                "value": "Indiana"
-            },
-            {
-                "col-title": "CXR_ID",
-                "value": "CXR10_IM-0002-2001"
-            },
-            {
-                "col-title": "CXR_observation_#",
-                "value": "1"
-            },
-            {
+            "row": [
+              {
                 "col-title": "Major Anatomic Regions",
                 "value": "Lungs"
-            },
-            {
+              },
+              {
                 "col-title": "Findings",
                 "value": "Mass/Nodule"
-            },
-            {
+              },
+              {
                 "col-title": "Subanatomy",
                 "value": "Upper lung zone"
-            },
-            {
+              },
+              {
                 "col-title": "Laterality Modifier",
                 "value": "Right"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 1",
                 "value": "Non-cavitary"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 2",
                 "value": "Non-calcified"
-            },
-            {
+              },
+              {
                 "col-title": "Severity Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "# Modifiers",
                 "value": "Solitary"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Qualitative",
                 "value": "Small"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Quantitative",
                 "value": "NA"
-            }
+              }
             ]
-        },
-        {
-            "row": [{
-                "col-title": "Annotator_ID",
-                "value": "Joy"
-            },
-            {
-                "col-title": "CXR_dataset",
-                "value": "Indiana"
-            },
-            {
-                "col-title": "CXR_ID",
-                "value": "CXR10_IM-0002-2001"
-            },
-            {
-                "col-title": "CXR_observation_#",
-                "value": "2"
-            },
-            {
+          },
+          {
+            "row": [
+              {
                 "col-title": "Major Anatomic Regions",
                 "value": "Pleura"
-            },
-            {
+              },
+              {
                 "col-title": "Findings",
                 "value": "None"
-            },
-            {
+              },
+              {
                 "col-title": "Subanatomy",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Laterality Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Severity Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "# Modifiers",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Qualitative",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Quantitative",
                 "value": "NA"
-            }
+              }
             ]
-        },
-        {
-            "row": [{
-                "col-title": "Annotator_ID",
-                "value": "Joy"
-            },
-            {
-                "col-title": "CXR_dataset",
-                "value": "Indiana"
-            },
-            {
-                "col-title": "CXR_ID",
-                "value": "CXR10_IM-0002-2001"
-            },
-            {
-                "col-title": "CXR_observation_#",
-                "value": "3"
-            },
-            {
+          },
+          {
+            "row": [
+              {
                 "col-title": "Major Anatomic Regions",
                 "value": "Major airways"
-            },
-            {
+              },
+              {
                 "col-title": "Findings",
                 "value": "None"
-            },
-            {
+              },
+              {
                 "col-title": "Subanatomy",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Laterality Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Severity Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "# Modifiers",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Qualitative",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Quantitative",
                 "value": "NA"
-            }
+              }
             ]
-        },
-        {
-            "row": [{
-                "col-title": "Annotator_ID",
-                "value": "Joy"
-            },
-            {
-                "col-title": "CXR_dataset",
-                "value": "Indiana"
-            },
-            {
-                "col-title": "CXR_ID",
-                "value": "CXR10_IM-0002-2001"
-            },
-            {
-                "col-title": "CXR_observation_#",
-                "value": "4"
-            },
-            {
+          },
+          {
+            "row": [
+              {
                 "col-title": "Major Anatomic Regions",
                 "value": "Mediastinum"
-            },
-            {
+              },
+              {
                 "col-title": "Findings",
                 "value": "None"
-            },
-            {
+              },
+              {
                 "col-title": "Subanatomy",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Laterality Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Severity Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "# Modifiers",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Qualitative",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Quantitative",
                 "value": "NA"
-            }
+              }
             ]
-        },
-        {
-            "row": [{
-                "col-title": "Annotator_ID",
-                "value": "Joy"
-            },
-            {
-                "col-title": "CXR_dataset",
-                "value": "Indiana"
-            },
-            {
-                "col-title": "CXR_ID",
-                "value": "CXR10_IM-0002-2001"
-            },
-            {
-                "col-title": "CXR_observation_#",
-                "value": "5"
-            },
-            {
+          },
+          {
+            "row": [
+              {
                 "col-title": "Major Anatomic Regions",
                 "value": "Vasculature"
-            },
-            {
+              },
+              {
                 "col-title": "Findings",
                 "value": "None"
-            },
-            {
+              },
+              {
                 "col-title": "Subanatomy",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Laterality Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Severity Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "# Modifiers",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Qualitative",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Quantitative",
                 "value": "NA"
-            }
+              }
             ]
-        },
-        {
-            "row": [{
-                "col-title": "Annotator_ID",
-                "value": "Joy"
-            },
-            {
-                "col-title": "CXR_dataset",
-                "value": "Indiana"
-            },
-            {
-                "col-title": "CXR_ID",
-                "value": "CXR10_IM-0002-2001"
-            },
-            {
-                "col-title": "CXR_observation_#",
-                "value": "6"
-            },
-            {
+          },
+          {
+            "row": [
+              {
                 "col-title": "Major Anatomic Regions",
                 "value": "Bones"
-            },
-            {
+              },
+              {
                 "col-title": "Findings",
                 "value": "Scoliosis"
-            },
-            {
+              },
+              {
                 "col-title": "Subanatomy",
                 "value": "Thoracic spine"
-            },
-            {
+              },
+              {
                 "col-title": "Laterality Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 1",
                 "value": "Left convex"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Severity Modifier",
                 "value": "Mild"
-            },
-            {
+              },
+              {
                 "col-title": "# Modifiers",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Qualitative",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Quantitative",
                 "value": "NA"
-            }
+              }
             ]
-        },
-        {
-            "row": [{
-                "col-title": "Annotator_ID",
-                "value": "Joy"
-            },
-            {
-                "col-title": "CXR_dataset",
-                "value": "Indiana"
-            },
-            {
-                "col-title": "CXR_ID",
-                "value": "CXR10_IM-0002-2001"
-            },
-            {
-                "col-title": "CXR_observation_#",
-                "value": "7"
-            },
-            {
+          },
+          {
+            "row": [
+              {
                 "col-title": "Major Anatomic Regions",
                 "value": "Other"
-            },
-            {
+              },
+              {
                 "col-title": "Findings",
                 "value": "None"
-            },
-            {
+              },
+              {
                 "col-title": "Subanatomy",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Laterality Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Location Modifier 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 1",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Character Modifiers 2",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Severity Modifier",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "# Modifiers",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Qualitative",
                 "value": "NA"
-            },
-            {
+              },
+              {
                 "col-title": "Size Modifiers Quantitative",
                 "value": "NA"
-            }
+              }
             ]
-        }
+          }
         ]
-    } ;
+      };
 
     return {
         getColumns: function () {

@@ -4417,6 +4417,479 @@ var SearchCtrl = (function () {
                         ]
                     }
                 ]
+            },
+            {
+                "name": "Pleura",
+                "Findings": [
+                    {
+                        "name": "Costophrenic angle blunting",
+                        "Subanatomy": [
+                            {
+                                "name": "Costophrenic angle",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Flattening of the hemidiaphragmatic silhouette",
+                        "Subanatomy": [
+                            {
+                                "name": "Hemidiaphragm",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Hydropneumothoraces",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Hydropneumothorax",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Obscuration of the diaphragmatic silhouette",
+                        "Subanatomy": [
+                            {
+                                "name": "Hemidiaphragm",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pleural calcification",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Apical" },
+                                    { "name": "Lateral" },
+                                    { "name": "Basilar/Diaphragmatic" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pleural effusion",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pleural mass",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Apical" },
+                                    { "name": "Lateral" },
+                                    { "name": "Basilar/Diaphragmatic" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pleural masses",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Apical" },
+                                    { "name": "Lateral" },
+                                    { "name": "Basilar/Diaphragmatic" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pleural thickening",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Apical" },
+                                    { "name": "Lateral" },
+                                    { "name": "Basilar/Diaphragmatic" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pneumothoraces",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Apical" },
+                                    { "name": "Basilar/Diaphragmatic" },
+                                    { "name": "NA" }                                
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Pneumothorax",
+                        "Subanatomy": [
+                            {
+                                "name": "NA",
+                                "Laterality Modifier": [
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "Apical" },
+                                    { "name": "Basilar/Diaphragmatic" },
+                                    { "name": "NA" }                                
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "NA" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "Small" },
+                                    { "name": "Moderate" },
+                                    { "name": "Large" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "Measures:" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     };

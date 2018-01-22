@@ -2104,12 +2104,14 @@ var SearchCtrl = (function () {
                         ]
                     },
                     {
-                        "name": "Scoliosis",
+                        "name": "Enlarged hilum",
                         "Subanatomy": [
                             {
-                                "name": "Cervical spine",
+                                "name": "Hila",
                                 "Laterality Modifier": [
-                                    { "name": "NA" }
+                                    { "name" : "Bilateral"},
+                                    { "name": "Left" },
+                                    { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
                                     { "name": "NA" }
@@ -2118,8 +2120,7 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Right Convex" },
-                                    { "name": "Left Convex" }
+                                    { "name": "NA" }
                                 ],
                                 "Character Modifiers 2": [
                                     { "name": "NA" }
@@ -2136,84 +2137,58 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Size Modifiers Quantitative": [
-                                    { "name": "Cobb angle measures:" }
-                                ]
-                            },
-                            {
-                                "name": "Thoracic spine",
-                                "Laterality Modifier": [
-                                    { "name": "NA" }
-                                ],
-                                "Location Modifier 1": [
-                                    { "name": "NA" }
-                                ],
-                                "Location Modifier 2": [
-                                    { "name": "NA" }
-                                ],
-                                "Character Modifiers 1": [
-                                    { "name": "Right Convex" },
-                                    { "name": "Left Convex" }
-                                ],
-                                "Character Modifiers 2": [
-                                    { "name": "NA" }
-                                ],
-                                "Severity Modifier": [
-                                    { "name": "Mild" },
-                                    { "name": "Moderate" },
-                                    { "name": "Severe" }
-                                ],
-                                "# Modifiers": [
-                                    { "name": "NA" }
-                                ],
-                                "Size Modifiers Qualitative": [
-                                    { "name": "NA" }
-                                ],
-                                "Size Modifiers Quantitative": [
-                                    { "name": "Cobb angle measures:" }
-                                ]
-                            },
-                            {
-                                "name": "Lumbar spine",
-                                "Laterality Modifier": [
-                                    { "name": "NA" }
-                                ],
-                                "Location Modifier 1": [
-                                    { "name": "NA" }
-                                ],
-                                "Location Modifier 2": [
-                                    { "name": "NA" }
-                                ],
-                                "Character Modifiers 1": [
-                                    { "name": "Right Convex" },
-                                    { "name": "Left Convex" }
-                                ],
-                                "Character Modifiers 2": [
-                                    { "name": "NA" }
-                                ],
-                                "Severity Modifier": [
-                                    { "name": "Mild" },
-                                    { "name": "Moderate" },
-                                    { "name": "Severe" }
-                                ],
-                                "# Modifiers": [
-                                    { "name": "NA" }
-                                ],
-                                "Size Modifiers Qualitative": [
-                                    { "name": "NA" }
-                                ],
-                                "Size Modifiers Quantitative": [
-                                    { "name": "Cobb angle measures:" }
+                                    { "name": "Measures:" }
                                 ]
                             }
                         ]
                     },
                     {
-                        "name": "Spinal degenerative changes",
+                        "name": "Findings consistent with granulomatous",
                         "Subanatomy": [
                             {
-                                "name": "Cervical spine",
+                                "name": "All Lung Zones",
                                 "Laterality Modifier": [
+                                    { "name" : "Bilateral"},
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
                                     { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Faint" },
+                                    { "name": "Moderately dense" },
+                                    { "name": "Very dense" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Findings consistent with granulomatous disease",
+                        "Subanatomy": [
+                            {
+                                "name": "Upper Lung Zone",
+                                "Laterality Modifier": [
+                                    { "name" : "Bilateral"},
+                                    { "name" : "Left"},
+                                    { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
                                     { "name": "NA" }
@@ -2243,9 +2218,11 @@ var SearchCtrl = (function () {
                                 ]
                             },
                             {
-                                "name": "Thoracic spine",
+                                "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
-                                    { "name": "NA" }
+                                    { "name" : "Bilateral"},
+                                    { "name" : "Left"},
+                                    { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
                                     { "name": "NA" }
@@ -2275,9 +2252,9 @@ var SearchCtrl = (function () {
                                 ]
                             },
                             {
-                                "name": "Lumbar spine",
+                                "name": "All Lung Zones",
                                 "Laterality Modifier": [
-                                    { "name": "NA" }
+                                    { "name" : "Left"}
                                 ],
                                 "Location Modifier 1": [
                                     { "name": "NA" }
@@ -2292,9 +2269,9 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Severity Modifier": [
-                                    { "name": "Mild" },
-                                    { "name": "Moderate" },
-                                    { "name": "Severe" }
+                                    { "name": "Faint" },
+                                    { "name": "Moderately dense" },
+                                    { "name": "Very dense" }
                                 ],
                                 "# Modifiers": [
                                     { "name": "NA" }

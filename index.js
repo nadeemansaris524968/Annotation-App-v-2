@@ -7201,12 +7201,12 @@ var controller = (function () {
             UICtrl.setupAddAnnotationRow();
             // Pass cxr_key to getColumns() and getRows() to retrieve appropriate data
             var cxr_key = '152ba901-12f8-44aa-a60e-c5217e1e9497';
-            AnnotationCtrl.getColumns(cxr_key);
-            AnnotationCtrl.getRows(cxr_key);
-            // UICtrl.createTbl(AnnotationCtrl.getColumns(cxr_key), AnnotationCtrl.getRows(cxr_key));
-            // UICtrl.createDataTable();
-            // UICtrl.placeDT();
-            // UICtrl.getRows();
+            // AnnotationCtrl.getColumns(cxr_key);
+            // AnnotationCtrl.getRows(cxr_key);
+            UICtrl.createTbl(AnnotationCtrl.getColumns(cxr_key),AnnotationCtrl.getRows(cxr_key));
+            UICtrl.createDataTable();
+            UICtrl.placeDT();
+            UICtrl.getRows();
         }
     }
 })(SearchCtrl, UICtrl, AnnotationCtrl);

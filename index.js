@@ -388,7 +388,25 @@ var AnnotationCtrl = (function () {
             return cxr_template.col;
         },
         getRows: function () {
-            return cxr_template['annotation-rows'];
+            var annotationRows = cxr_template['annotation-rows'];
+            var finalRows = [];
+
+            // Go through each annotation row
+            for (var i = 0; i < annotationRows.length; i++) {
+                var rowObj = annotationRows[i];
+                // Go through each annotation row col-value pair
+                for (var j = 0; j < rowObj['row'].length; j++) {
+                    var cellObj = rowObj['row'][j];
+                    // If col-title === Findings value != None
+                    if (cellObj['col-title'] === 'Findings' && cellObj['value'] !== 'None') {
+                        // Add row to finalRows & break
+                        finalRows.push(rowObj);
+                        break;
+                    }
+                }
+            }
+
+            return finalRows;
         }
     }
 })();
@@ -480,10 +498,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Location Modifier 1": [
+                                    { "name": "C2" },
+                                    { "name": "C3" },
                                     { "name": "C4" },
                                     { "name": "C5" },
-                                    { "name": "C5" },
-                                    { "name": "C7" }
+                                    { "name": "C6" },
+                                    { "name": "C7" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -492,12 +513,13 @@ var SearchCtrl = (function () {
                                     { "name": "Pedicle" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -529,12 +551,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -568,12 +591,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -599,7 +623,8 @@ var SearchCtrl = (function () {
                                     { "name": "L1" },
                                     { "name": "L2" },
                                     { "name": "L3" },
-                                    { "name": "L4" }
+                                    { "name": "L4" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -608,12 +633,13 @@ var SearchCtrl = (function () {
                                     { "name": "Pedicle" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -637,18 +663,19 @@ var SearchCtrl = (function () {
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
-                                    { "name": "1" },
-                                    { "name": "2" },
-                                    { "name": "3" },
-                                    { "name": "4" },
-                                    { "name": "5" },
-                                    { "name": "6" },
-                                    { "name": "7" },
-                                    { "name": "8" },
-                                    { "name": "9" },
-                                    { "name": "10" },
-                                    { "name": "11" },
-                                    { "name": "12" }
+                                    { "name": "Rib 1" },
+                                    { "name": "Rib 2" },
+                                    { "name": "Rib 3" },
+                                    { "name": "Rib 4" },
+                                    { "name": "Rib 5" },
+                                    { "name": "Rib 6" },
+                                    { "name": "Rib 7" },
+                                    { "name": "Rib 8" },
+                                    { "name": "Rib 9" },
+                                    { "name": "Rib 10" },
+                                    { "name": "Rib 11" },
+                                    { "name": "Rib 12" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Posterior" },
@@ -656,12 +683,13 @@ var SearchCtrl = (function () {
                                     { "name": "Anterior" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -695,12 +723,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -731,12 +760,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -770,7 +800,8 @@ var SearchCtrl = (function () {
                                     { "name": "T9" },
                                     { "name": "T10" },
                                     { "name": "T11" },
-                                    { "name": "T12" }
+                                    { "name": "T12" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -779,12 +810,13 @@ var SearchCtrl = (function () {
                                     { "name": "Pedicle" }
                                 ],
                                 "Character Modifiers 1": [
-                                    { "name": "Focal Lytic" },
-                                    { "name": "Focal Blastic" },
-                                    { "name": "Likely Pagets" }
+                                    { "name": "Lytic" },
+                                    { "name": "Sclerotic" },
+                                    { "name": "Pagets-like" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "NA" }
+                                    { "name": "Focal" },
+                                    { "name": "Diffuse" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -883,10 +915,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Location Modifier 1": [
+                                    { "name": "C2" },
+                                    { "name": "C3" },
                                     { "name": "C4" },
                                     { "name": "C5" },
-                                    { "name": "C5" },
-                                    { "name": "C7" }
+                                    { "name": "C6" },
+                                    { "name": "C7" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -936,7 +971,8 @@ var SearchCtrl = (function () {
                                     { "name": "Displaced" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "Comminuted" }
+                                    { "name": "Comminuted" },
+                                    { "name": "Non-comminuted" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -972,7 +1008,8 @@ var SearchCtrl = (function () {
                                     { "name": "Displaced" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "Comminuted" }
+                                    { "name": "Comminuted" },
+                                    { "name": "Non-comminuted" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -996,7 +1033,8 @@ var SearchCtrl = (function () {
                                     { "name": "L1" },
                                     { "name": "L2" },
                                     { "name": "L3" },
-                                    { "name": "L4" }
+                                    { "name": "L4" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -1034,18 +1072,19 @@ var SearchCtrl = (function () {
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
-                                    { "name": "1" },
-                                    { "name": "2" },
-                                    { "name": "3" },
-                                    { "name": "4" },
-                                    { "name": "5" },
-                                    { "name": "6" },
-                                    { "name": "7" },
-                                    { "name": "8" },
-                                    { "name": "9" },
-                                    { "name": "10" },
-                                    { "name": "11" },
-                                    { "name": "12" }
+                                    { "name": "Rib 1" },
+                                    { "name": "Rib 2" },
+                                    { "name": "Rib 3" },
+                                    { "name": "Rib 4" },
+                                    { "name": "Rib 5" },
+                                    { "name": "Rib 6" },
+                                    { "name": "Rib 7" },
+                                    { "name": "Rib 8" },
+                                    { "name": "Rib 9" },
+                                    { "name": "Rib 10" },
+                                    { "name": "Rib 11" },
+                                    { "name": "Rib 12" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Posterior" },
@@ -1058,6 +1097,7 @@ var SearchCtrl = (function () {
                                 ],
                                 "Character Modifiers 2": [
                                     { "name": "Comminuted" },
+                                    { "name": "Non-comminuted" },
                                     { "name": "Segmental" }
                                 ],
                                 "Severity Modifier": [
@@ -1094,7 +1134,8 @@ var SearchCtrl = (function () {
                                     { "name": "Displaced" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "Communited" }
+                                    { "name": "Communited" },
+                                    { "name": "Non-comminuted" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -1127,7 +1168,8 @@ var SearchCtrl = (function () {
                                     { "name": "Displaced" }
                                 ],
                                 "Character Modifiers 2": [
-                                    { "name": "Communited" }
+                                    { "name": "Communited" },
+                                    { "name": "Non-comminuted" }
                                 ],
                                 "Severity Modifier": [
                                     { "name": "NA" }
@@ -1159,7 +1201,8 @@ var SearchCtrl = (function () {
                                     { "name": "T9" },
                                     { "name": "T10" },
                                     { "name": "T11" },
-                                    { "name": "T12" }
+                                    { "name": "T12" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -1201,10 +1244,13 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "Location Modifier 1": [
+                                    { "name": "C2" },
+                                    { "name": "C3" },
                                     { "name": "C4" },
                                     { "name": "C5" },
-                                    { "name": "C5" },
-                                    { "name": "C7" }
+                                    { "name": "C6" },
+                                    { "name": "C7" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -1315,7 +1361,8 @@ var SearchCtrl = (function () {
                                     { "name": "L1" },
                                     { "name": "L2" },
                                     { "name": "L3" },
-                                    { "name": "L4" }
+                                    { "name": "L4" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -1352,18 +1399,19 @@ var SearchCtrl = (function () {
                                     { "name": "Right" }
                                 ],
                                 "Location Modifier 1": [
-                                    { "name": "1" },
-                                    { "name": "2" },
-                                    { "name": "3" },
-                                    { "name": "4" },
-                                    { "name": "5" },
-                                    { "name": "6" },
-                                    { "name": "7" },
-                                    { "name": "8" },
-                                    { "name": "9" },
-                                    { "name": "10" },
-                                    { "name": "11" },
-                                    { "name": "12" }
+                                    { "name": "Rib 1" },
+                                    { "name": "Rib 2" },
+                                    { "name": "Rib 3" },
+                                    { "name": "Rib 4" },
+                                    { "name": "Rib 5" },
+                                    { "name": "Rib 6" },
+                                    { "name": "Rib 7" },
+                                    { "name": "Rib 8" },
+                                    { "name": "Rib 9" },
+                                    { "name": "Rib 10" },
+                                    { "name": "Rib 11" },
+                                    { "name": "Rib 12" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Posterior" },
@@ -1474,7 +1522,8 @@ var SearchCtrl = (function () {
                                     { "name": "T9" },
                                     { "name": "T10" },
                                     { "name": "T11" },
-                                    { "name": "T12" }
+                                    { "name": "T12" },
+                                    { "name": "Multiple non-specified" }
                                 ],
                                 "Location Modifier 2": [
                                     { "name": "Body" },
@@ -1722,6 +1771,7 @@ var SearchCtrl = (function () {
                             {
                                 "name": "Upper Lung Zone",
                                 "Laterality Modifier": [
+                                    { "name": "Bilateral" },
                                     { "name": "Left" },
                                     { "name": "Right" }
                                 ],
@@ -2037,8 +2087,7 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "# Modifiers": [
-                                    { "name": "Focal" },
-                                    { "name": "Multifocal" }
+                                    { "name": "NA" }
                                 ],
                                 "Size Modifiers Qualitative": [
                                     { "name": "NA" }
@@ -2072,8 +2121,7 @@ var SearchCtrl = (function () {
                                     { "name": "NA" }
                                 ],
                                 "# Modifiers": [
-                                    { "name": "Focal" },
-                                    { "name": "Multifocal" }
+                                    { "name": "NA" }
                                 ],
                                 "Size Modifiers Qualitative": [
                                     { "name": "NA" }
@@ -2088,7 +2136,7 @@ var SearchCtrl = (function () {
                         "name": "Calcified hilar nodes",
                         "Subanatomy": [
                             {
-                                "name": "HILA",
+                                "name": "Hila",
                                 "Laterality Modifier": [
                                     { "name": "Bilateral" },
                                     { "name": "Left" },
@@ -2453,6 +2501,45 @@ var SearchCtrl = (function () {
                         ]
                     },
                     {
+                        "name": "Hyperaeration",
+                        "Subanatomy": [
+                            {
+                                "name": "All Lung Zones",
+                                "Laterality Modifier": [
+                                    { "name": "Bilateral" },
+                                    { "name": "Left" },
+                                    { "name": "Right" }
+                                ],
+                                "Location Modifier 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Location Modifier 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 1": [
+                                    { "name": "NA" }
+                                ],
+                                "Character Modifiers 2": [
+                                    { "name": "NA" }
+                                ],
+                                "Severity Modifier": [
+                                    { "name": "Mild" },
+                                    { "name": "Moderate" },
+                                    { "name": "Severe" }
+                                ],
+                                "# Modifiers": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Qualitative": [
+                                    { "name": "NA" }
+                                ],
+                                "Size Modifiers Quantitative": [
+                                    { "name": "NA" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "name": "Increased reticular markings",
                         "Subanatomy": [
                             {
@@ -2744,7 +2831,7 @@ var SearchCtrl = (function () {
                                 ]
                             },
                             {
-                                "name": "Upper Lung Zone",
+                                "name": "Lower Lung Zone",
                                 "Laterality Modifier": [
                                     { "name": "Bilateral" },
                                     { "name": "Left" },
@@ -5120,7 +5207,10 @@ var UICtrl = (function () {
         table = $(DOMStrings.table).DataTable({
             "paging": false,
             "scrollY": "400px",
-            "scrollX": true
+            "scrollX": true,
+            "columnDefs": [
+                { "width": "10%", "targets": "_all" }
+            ]
         });
 
         // Fix for enabling vertical scroll
@@ -5408,7 +5498,7 @@ var UICtrl = (function () {
                     td.appendChild(cellText);
                     tr.appendChild(td);
                 });
-                
+
                 var deleteBtnTd = document.createElement('td');
                 var rowDeleteBtn = document.createElement('button');
                 rowDeleteBtn.appendChild(document.createTextNode('Delete'));

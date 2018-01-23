@@ -2,6 +2,13 @@ body {
     background-color: burlywood;
 }
 
+.dt-index {
+    column-width: auto !important;
+}
+
+td {word-wrap: break-word}
+th {word-wrap: break-word}
+
 .container {
     padding-bottom: 20px;
 }
@@ -25,4 +32,3 @@ h2 {
     overflow-y: auto; 
     overflow-x:hidden; 
 }
-

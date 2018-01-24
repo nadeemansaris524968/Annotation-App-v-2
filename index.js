@@ -8196,6 +8196,7 @@ var UICtrl = (function () {
 
     var DOMStrings = {
         body: 'body',
+        deleteBtn: '.deleteRowsBtn',
         table: 'table',
         thead: 'thead',
         tbody: 'tbody',
@@ -8285,6 +8286,15 @@ var UICtrl = (function () {
             "columnDefs": [
                 { "width": "10%", "targets": "_all" }
             ]
+        });
+
+        $('#annotation-table tbody').on('click', 'tr', function () {
+            $(this).toggleClass('selected');
+        });
+
+        $(DOMStrings.deleteBtn).on('click', function() {
+            // draw(false) is to not reset pagination - not required but good practice
+            table.rows('.selected').remove().draw(false);
         });
 
         // Fix for enabling vertical scroll
